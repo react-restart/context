@@ -1,0 +1,1 @@
+export { mapContextToProps } from './mapContextToProps';

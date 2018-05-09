@@ -1,0 +1,6 @@
+lib/
+es/
+**/node_modules/**
+**/fixtures/**
+**/package.json
+**/CHANGELOG.md

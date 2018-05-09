@@ -1,0 +1,16 @@
+sudo: false
+
+language: node_js
+node_js:
+  - '9'
+  - '8'
+after_script:
+  - yarn codecov
+
+after_success:
+  - yarn semantic-release
+
+cache: yarn
+branches:
+  only:
+    - master
