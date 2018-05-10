@@ -14,16 +14,12 @@
     "tdd": "jest --watch",
     "test": "npm run lint && jest",
     "testonly": "jest",
-    "build:es":
-      "babel src -d es --env-name esm --ignore **/__tests__ --delete-dir-on-start",
-    "build:lib":
-      "babel src -d lib --ignore **/__tests__ --delete-dir-on-start",
+    "build:es": "babel src -d es --env-name esm --ignore **/__tests__ --delete-dir-on-start",
+    "build:lib": "babel src -d lib --ignore **/__tests__ --delete-dir-on-start",
     "build": "npm run build:lib && npm run build:es",
     "prepublishOnly": "yarn run build",
-    "lint":
-      "eslint . && prettier --list-different --ignore-path .eslintignore '**/*.{json,css,md}'",
-    "format":
-      "eslint . --fix && prettier --write --ignore-path .eslintignore '**/*.{json,css,md}'",
+    "lint": "eslint . && prettier --list-different --ignore-path .eslintignore '**/*.{json,css,md}'",
+    "format": "eslint . --fix && prettier --write --ignore-path .eslintignore '**/*.{json,css,md}'",
     "precommit": "lint-staged",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
@@ -37,19 +33,28 @@
     "trailingComma": "all"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
     "*.{json,css,md}": [
       "prettier --write --ignore-path .eslintignore",
       "git add"
     ]
   },
   "jest": {
-    "roots": ["<rootDir>/test"],
+    "roots": [
+      "<rootDir>/test"
+    ],
     "testEnvironment": "jsdom",
-    "setupFiles": ["<rootDir>/test/index.js"]
+    "setupFiles": [
+      "<rootDir>/test/index.js"
+    ]
   },
   "release": {
-    "extends": ["@4c/semantic-release-config"]
+    "extends": [
+      "@4c/semantic-release-config"
+    ]
   },
   "devDependencies": {
     "@4c/babel-preset-4catalyzer": "^1.0.0",
@@ -71,6 +76,7 @@
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.5.1",
     "husky": "^0.14.3",
+    "jest": "^22.4.3",
     "lint-staged": "^7.1.0",
     "prettier": "^1.10.2",
     "react": "^16.3.2",
