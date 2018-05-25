@@ -1,6 +1,6 @@
 {
   "name": "react-context-toolbox",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "modules": "es/index.js",
   "jsnext:main": "es/index.js",
@@ -14,16 +14,12 @@
     "tdd": "jest --watch",
     "test": "npm run lint && jest",
     "testonly": "jest",
-    "build:es":
-      "babel src -d es --env-name esm --ignore **/__tests__ --delete-dir-on-start",
-    "build:lib":
-      "babel src -d lib --ignore **/__tests__ --delete-dir-on-start",
+    "build:es": "babel src -d es --env-name esm --ignore **/__tests__ --delete-dir-on-start",
+    "build:lib": "babel src -d lib --ignore **/__tests__ --delete-dir-on-start",
     "build": "npm run build:lib && npm run build:es",
     "prepublishOnly": "yarn run build",
-    "lint":
-      "eslint . && prettier --list-different --ignore-path .eslintignore '**/*.{json,css,md}'",
-    "format":
-      "eslint . --fix && prettier --write --ignore-path .eslintignore '**/*.{json,css,md}'",
+    "lint": "eslint . && prettier --list-different --ignore-path .eslintignore '**/*.{json,css,md}'",
+    "format": "eslint . --fix && prettier --write --ignore-path .eslintignore '**/*.{json,css,md}'",
     "precommit": "lint-staged",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
@@ -37,19 +33,28 @@
     "trailingComma": "all"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
     "*.{json,css,md}": [
       "prettier --write --ignore-path .eslintignore",
       "git add"
     ]
   },
   "jest": {
-    "roots": ["<rootDir>/test"],
+    "roots": [
+      "<rootDir>/test"
+    ],
     "testEnvironment": "jsdom",
-    "setupFiles": ["<rootDir>/test/index.js"]
+    "setupFiles": [
+      "<rootDir>/test/index.js"
+    ]
   },
   "release": {
-    "extends": ["@4c/semantic-release-config"]
+    "extends": [
+      "@4c/semantic-release-config"
+    ]
   },
   "devDependencies": {
     "@4c/babel-preset-4catalyzer": "^1.0.0",
