@@ -12,6 +12,6 @@ export default function transformContext(Context) {
         )}
       </Context.Consumer>
     ),
-    { displayName: `ContextTransformer` },
+    { displayName: 'ContextTransformer' },
   );
 }
