@@ -6,7 +6,7 @@
   "jsnext:main": "es/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/4Catalyzer/context.git"
+    "url": "https://github.com/4Catalyzer/react-context-toolbox.git"
   },
   "author": "4Catalyzer",
   "license": "MIT",

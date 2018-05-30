@@ -1,4 +1,5 @@
 import React from 'react';
+import forwardRef from './forwardRef';
 
 const getDisplayName = Component => {
   const name =
@@ -47,9 +48,10 @@ function $mapContextToProps(
   }
 
   const contextTransform = consumers.length === 1 ? singleRender : multiRender;
-  contextTransform.displayName = displayName || getDisplayName(Component);
 
-  return React.forwardRef(contextTransform);
+  return forwardRef(contextTransform, {
+    displayName: displayName || getDisplayName(Component),
+  });
 }
 
 export default function mapContextToProps(maybeOpts, mapToProps, Component) {
