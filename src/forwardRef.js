@@ -6,6 +6,9 @@ export default function forwardRef(
 ) {
   const render = (...args) => renderFn(...args);
 
-  Object.assign(render, { displayName, propTypes, defaultProps });
-  return React.forwardRef(render);
+  render.displayName = displayName;
+  
+  const Forwarded = React.forwardRef(render);
+  Forwarded.propTypes = propTypes;
+  Forwarded.defaultProps = defaultProps;
 }
