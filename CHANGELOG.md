@@ -1,3 +1,11 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/4Catalyzer/react-context-toolbox/compare/v1.1.0...v1.2.0) (2018-07-26)
+
+
+### Features
+
+* add injectContextAsProp ([cf07839](https://github.com/4Catalyzer/react-context-toolbox/commit/cf07839))
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/4Catalyzer/react-context-toolbox/compare/v1.0.0...v1.1.0) (2018-05-30)
 
