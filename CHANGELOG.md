@@ -1,3 +1,11 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/4Catalyzer/react-context-toolbox/compare/v1.2.0...v1.2.1) (2018-07-27)
+
+
+### Bug Fixes
+
+* Add LICENSE ([#7](https://github.com/4Catalyzer/react-context-toolbox/issues/7)) ([303226e](https://github.com/4Catalyzer/react-context-toolbox/commit/303226e))
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/4Catalyzer/react-context-toolbox/compare/v1.1.0...v1.2.0) (2018-07-26)
 
