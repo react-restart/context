@@ -12,5 +12,5 @@ export default function forwardRef(
   Forwarded.propTypes = propTypes;
   Forwarded.defaultProps = defaultProps;
 
-  return Forwarded
+  return Forwarded;
 }
