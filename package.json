@@ -20,9 +20,7 @@
     "prepublishOnly": "yarn run build",
     "lint": "eslint . && prettier --list-different --ignore-path .eslintignore '**/*.{json,css,md}'",
     "format": "eslint . --fix && prettier --write --ignore-path .eslintignore '**/*.{json,css,md}'",
-    "precommit": "lint-staged",
-    "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release"
+    "precommit": "lint-staged"
   },
   "publishConfig": {
     "access": "public"

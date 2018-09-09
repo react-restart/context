@@ -4,7 +4,7 @@ export default function forwardRef(
   renderFn,
   { displayName, propTypes, defaultProps, allowFallback = false },
 ) {
-  const render = (...args) => renderFn(...args);
+  const render = (props, ref) => renderFn(props, ref);
 
   Object.assign(render, { displayName });
 
