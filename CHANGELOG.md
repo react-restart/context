@@ -1,3 +1,11 @@
+<a name="1.2.2"></a>
+## [1.2.2](https://github.com/4Catalyzer/react-context-toolbox/compare/v1.2.1...v1.2.2) (2018-09-09)
+
+
+### Bug Fixes
+
+* forwardRef argument count ([2a2567b](https://github.com/4Catalyzer/react-context-toolbox/commit/2a2567b))
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/4Catalyzer/react-context-toolbox/compare/v1.2.0...v1.2.1) (2018-07-27)
 
