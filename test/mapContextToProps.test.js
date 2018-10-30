@@ -137,4 +137,16 @@ describe('mapContextToProps', () => {
 
     expect(Mapper.render.displayName).toEqual('WithIntl');
   });
+
+  it('should not warn about Contexts', () => {
+    const Mapper = mapContextToProps(
+      {
+        consumers: React.createContext('foo'),
+        mapToProps: foo => ({ children: foo }),
+        displayName: 'WithIntl',
+      },
+      'div',
+    );
+    mount(<Mapper />);
+  });
 });

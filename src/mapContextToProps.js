@@ -9,6 +9,8 @@ const getDisplayName = Component => {
   return name ? `ContextTransform(${name})` : 'ContextTransform';
 };
 
+const ensureConsumer = c => c.Consumer || c;
+
 function $mapContextToProps(
   {
     consumers: maybeArrayOfConsumers,
@@ -23,7 +25,7 @@ function $mapContextToProps(
     consumers = [maybeArrayOfConsumers];
   }
 
-  const SingleConsumer = consumers[0];
+  const SingleConsumer = ensureConsumer(consumers[0]);
   function singleRender(props, ref) {
     const propsWithRef = { [forwardRefAs]: ref, ...props };
     return (
@@ -38,9 +40,10 @@ function $mapContextToProps(
   function multiRender(props, ref) {
     const propsWithRef = { [forwardRefAs]: ref, ...props };
     return consumers.reduceRight(
-      (inner, Consumer) => (...args) => (
-        <Consumer>{value => inner(...args, value)}</Consumer>
-      ),
+      (inner, Context) => (...args) => {
+        const Consumer = ensureConsumer(Context);
+        return <Consumer>{value => inner(...args, value)}</Consumer>;
+      },
       (...contexts) => (
         <Component {...propsWithRef} {...mapToProps(...contexts, props)} />
       ),
