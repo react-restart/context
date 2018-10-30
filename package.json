@@ -1,6 +1,6 @@
 {
   "name": "react-context-toolbox",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "lib/index.js",
   "modules": "es/index.js",
   "jsnext:main": "es/index.js",
