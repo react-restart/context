@@ -1,3 +1,16 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/4Catalyzer/react-context-toolbox/compare/v1.2.3...v2.0.0) (2018-11-30)
+
+
+### Features
+
+* add types, change published directory ([#10](https://github.com/4Catalyzer/react-context-toolbox/issues/10)) ([9886e69](https://github.com/4Catalyzer/react-context-toolbox/commit/9886e69))
+
+
+### BREAKING CHANGES
+
+* remove lib directory
+
 <a name="1.2.3"></a>
 ## [1.2.3](https://github.com/4Catalyzer/react-context-toolbox/compare/v1.2.2...v1.2.3) (2018-10-30)
 
