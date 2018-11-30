@@ -1,6 +1,6 @@
 {
   "name": "react-context-toolbox",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "lib/index.js",
   "module": "lib/es/index.js",
   "types": "types/index.d.ts",
@@ -16,15 +16,11 @@
     "testonly": "jest",
     "test:types": "dtslint types",
     "build:es": "babel src -d lib/es --env-name esm --ignore **/__tests__ ",
-    "build:lib":
-      "babel src -d lib --ignore **/__tests__ --delete-dir-on-start ",
-    "build":
-      "npm run build:lib && npm run build:es && cpy types/index.d.ts lib/types",
+    "build:lib": "babel src -d lib --ignore **/__tests__ --delete-dir-on-start ",
+    "build": "npm run build:lib && npm run build:es && cpy types/index.d.ts lib/types",
     "prepublishOnly": "yarn run build",
-    "lint":
-      "eslint . && prettier --list-different --ignore-path .eslintignore '**/*.{json,css,md}'",
-    "format":
-      "eslint . --fix && prettier --write --ignore-path .eslintignore '**/*.{json,css,md}'",
+    "lint": "eslint . && prettier --list-different --ignore-path .eslintignore '**/*.{json,css,md}'",
+    "format": "eslint . --fix && prettier --write --ignore-path .eslintignore '**/*.{json,css,md}'",
     "precommit": "lint-staged"
   },
   "publishConfig": {
@@ -36,19 +32,28 @@
     "trailingComma": "all"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
     "*.{json,css,md}": [
       "prettier --write --ignore-path .eslintignore",
       "git add"
     ]
   },
   "jest": {
-    "roots": ["<rootDir>/test"],
+    "roots": [
+      "<rootDir>/test"
+    ],
     "testEnvironment": "jsdom",
-    "setupFiles": ["<rootDir>/test/index.js"]
+    "setupFiles": [
+      "<rootDir>/test/index.js"
+    ]
   },
   "release": {
-    "extends": ["@4c/semantic-release-config"],
+    "extends": [
+      "@4c/semantic-release-config"
+    ],
     "pkgRoot": "lib"
   },
   "devDependencies": {
