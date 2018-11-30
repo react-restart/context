@@ -1,3 +1,5 @@
+// TypeScript Version: 3.0
+
 declare module 'react-context-toolbox/forwardRef' {
   import * as React from 'react';
 
@@ -37,24 +39,12 @@ declare module 'react-context-toolbox/mapContextToProps' {
 
   // Single Context
   function mapContextToProps<TComponent, TContext, TContextProps, TOwnProps>(
-    context: React.Context<TContext>,
+    context: React.Context<TContext> | [React.Context<TContext>],
     mapToProps: (ctxValue: TContext, props: TOwnProps) => TContextProps,
     Component: TComponent,
   ): ContextInjectedComponent<TComponent, TContextProps, TOwnProps>;
   function mapContextToProps<TContext, TContextProps, TOwnProps>(
-    context: React.Context<TContext>,
-    mapToProps: (ctxValue: TContext, props: TOwnProps) => TContextProps,
-  ): <TComponent>(
-    component: TComponent,
-  ) => ContextInjectedComponent<TComponent, TContextProps, TOwnProps>;
-
-  function mapContextToProps<TComponent, TContext, TContextProps, TOwnProps>(
-    context: [React.Context<TContext>],
-    mapToProps: (ctxValue: TContext, props: TOwnProps) => TContextProps,
-    Component: TComponent,
-  ): ContextInjectedComponent<TComponent, TContextProps, TOwnProps>;
-  function mapContextToProps<TContext, TContextProps, TOwnProps>(
-    context: [React.Context<TContext>],
+    context: React.Context<TContext> | [React.Context<TContext>],
     mapToProps: (ctxValue: TContext, props: TOwnProps) => TContextProps,
   ): <TComponent>(
     component: TComponent,
