@@ -8,6 +8,7 @@ after_script:
   - yarn codecov
 
 after_success:
+  - yarn run build
   - yarn travis-deploy-once "yarn semantic-release"
 
 cache: yarn
