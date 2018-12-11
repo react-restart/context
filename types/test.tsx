@@ -2,8 +2,7 @@
 
 import * as React from 'react';
 
-import forwardRef from 'react-context-toolbox/forwardRef';
-import mapContextToProps from 'react-context-toolbox/mapContextToProps';
+import { forwardRef, mapContextToProps } from 'react-context-toolbox';
 
 const Foo = (props: {
   bar: boolean;

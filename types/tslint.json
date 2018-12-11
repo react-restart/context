@@ -17,6 +17,7 @@
     ],
 
     "no-unnecessary-generics": false,
-    "no-unnecessary-class": false
+    "no-unnecessary-class": false,
+    "no-single-declare-module": false
   }
 }
