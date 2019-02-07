@@ -1,3 +1,14 @@
+## [2.0.3](https://github.com/react-restart/context/compare/v2.0.2...v2.0.3) (2019-02-07)
+
+
+### Bug Fixes
+
+* use inner displayName as default ([b518730](https://github.com/react-restart/context/commit/b518730))
+
+
+
+
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://github.com/4Catalyzer/react-context-toolbox/compare/v2.0.1...v2.0.2) (2018-12-11)
 
