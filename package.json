@@ -1,6 +1,6 @@
 {
   "name": "@restart/context",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "lib/index.js",
   "module": "lib/es/index.js",
   "types": "index.d.ts",
