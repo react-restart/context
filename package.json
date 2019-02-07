@@ -1,12 +1,12 @@
 {
-  "name": "react-context-toolbox",
+  "name": "@restart/context",
   "version": "2.0.2",
   "main": "lib/index.js",
   "module": "lib/es/index.js",
   "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/4Catalyzer/react-context-toolbox.git"
+    "url": "https://github.com/react-restart/context"
   },
   "author": "4Catalyzer",
   "license": "MIT",
@@ -42,9 +42,6 @@
     ]
   },
   "jest": {
-    "roots": [
-      "<rootDir>/test"
-    ],
     "testEnvironment": "jsdom",
     "setupFiles": [
       "<rootDir>/test/index.js"

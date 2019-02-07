@@ -2,11 +2,15 @@ import React from 'react';
 
 export default function forwardRef(
   renderFn,
-  { displayName, propTypes, defaultProps, allowFallback = false },
+  {
+    propTypes,
+    defaultProps,
+    allowFallback = false,
+    displayName = renderFn.name || renderFn.displayName,
+  } = {},
 ) {
   const render = (props, ref) => renderFn(props, ref);
-
-  Object.assign(render, { displayName });
+  render.displayName = displayName;
 
   if (React.forwardRef || !allowFallback)
     return Object.assign(React.forwardRef(render), {
