@@ -1,6 +1,6 @@
 // TypeScript Version: 3.0
 
-declare module 'react-context-toolbox/forwardRef' {
+declare module '@restart/context/forwardRef' {
   import * as React from 'react';
 
   interface ForwardRefOptions<TProps> {

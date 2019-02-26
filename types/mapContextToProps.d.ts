@@ -1,6 +1,6 @@
 // TypeScript Version: 3.0
 
-declare module 'react-context-toolbox/mapContextToProps' {
+declare module '@restart/context/mapContextToProps' {
   import * as React from 'react';
 
   type Omit<T, U> = Pick<T, Exclude<keyof T, keyof U>>;

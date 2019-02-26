@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 
-import { forwardRef, mapContextToProps } from 'react-context-toolbox';
+import { forwardRef, mapContextToProps } from '@restart/context';
 
 const Foo = (props: {
   bar: boolean;
@@ -15,11 +15,11 @@ const ForwardedFoo = forwardRef(
   ),
 );
 
-<ForwardedFoo bar={false} />;
-<ForwardedFoo bar={false} ref={React.createRef()} />;
+  <ForwardedFoo bar={false} />;
+  <ForwardedFoo bar={false} ref={React.createRef()} />;
 
 // $ExpectError
-<Foo bar={false} ref={React.createRef()} />;
+  <Foo bar={false} ref={React.createRef()} />;
 
 const Context1 = React.createContext<boolean>(false);
 
@@ -31,10 +31,10 @@ const MappedFoo1 = mapContextToProps(
   Foo,
 );
 
-<MappedFoo1 />;
+  <MappedFoo1 />;
 
 // $ExpectError
-<MappedFoo1 bar={false} />;
+  <MappedFoo1 bar={false} />;
 
 const MappedFoo2 = mapContextToProps(
   Context1,
@@ -44,12 +44,12 @@ const MappedFoo2 = mapContextToProps(
   Foo,
 );
 
-<MappedFoo2 />;
+  <MappedFoo2 />;
 
-<MappedFoo2 bar={false} />;
+  <MappedFoo2 bar={false} />;
 
 // $ExpectError
-<MappedFoo2 bar="foo" />;
+  <MappedFoo2 bar="foo" />;
 
 const Curried = mapContextToProps(
   Context1,
@@ -60,9 +60,9 @@ const Curried = mapContextToProps(
 
 const MappedFoo3 = Curried(Foo);
 
-<MappedFoo3 />;
+  <MappedFoo3 />;
 
-<MappedFoo3 bar={false} />;
+  <MappedFoo3 bar={false} />;
 
 const Context2 = React.createContext<string>('baz');
 const Context3 = React.createContext<string>('baz');
@@ -83,7 +83,7 @@ const Foo2Context = mapContextToProps(
   MultiFoo,
 );
 
-<Foo2Context />;
+  <Foo2Context />;
 
 const Foo3Context = mapContextToProps(
   [Context1, Context2, Context3],
@@ -91,7 +91,7 @@ const Foo3Context = mapContextToProps(
   MultiFoo,
 );
 
-<Foo3Context />;
+  <Foo3Context />;
 
 const Foo4Context = mapContextToProps(
   [Context1, Context2, Context3, Context4],
@@ -99,4 +99,4 @@ const Foo4Context = mapContextToProps(
   MultiFoo,
 );
 
-<Foo4Context />;
+  <Foo4Context />;

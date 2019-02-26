@@ -1,17 +1,23 @@
 sudo: false
 
 language: node_js
+
 node_js:
-  - '9'
-  - '8'
-after_script:
-  - yarn codecov
+  - "10"
+  - "8"
 
 after_success:
-  - yarn run build
-  - yarn travis-deploy-once "yarn semantic-release"
+  - yarn codecov
 
 cache: yarn
 branches:
   only:
     - master
+
+jobs:
+  include:
+    - stage: release
+      node_js: "10"
+      script:
+        - yarn run build
+        - yarn semantic-release
