@@ -1,3 +1,11 @@
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/react-restart/context/compare/v2.0.4...v2.1.0) (2019-02-26)
+
+
+### Features
+
+* add displayName to forwardRef ([6e69ad1](https://github.com/react-restart/context/commit/6e69ad1))
+
 ## [2.0.3](https://github.com/react-restart/context/compare/v2.0.2...v2.0.3) (2019-02-07)
 
 
