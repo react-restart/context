@@ -26,11 +26,7 @@ describe('mapContextToProps', () => {
         foo,
         bar,
       }),
-      props => (
-        <div>
-          {props.foo} {props.bar}
-        </div>
-      ),
+      props => <div>{`${props.foo} ${props.bar}`}</div>,
     );
 
     expect(

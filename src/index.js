@@ -1,2 +1,2 @@
-export { mapContextToProps } from './mapContextToProps';
-export { forwardRef } from './forwardRef';
+export mapContextToProps from './mapContextToProps';
+export forwardRef from './forwardRef';

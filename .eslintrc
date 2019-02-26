@@ -2,7 +2,8 @@
   "extends": ["4catalyzer-react", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "react/prop-types": "off"
   },
   "env": {
     "browser": true
@@ -12,7 +13,7 @@
       "files": ["test/**"],
       "plugins": ["jest"],
       "env": {
-        "jest/globals": true
+        "jest": true
       },
       "rules": {
         "global-require": "off",

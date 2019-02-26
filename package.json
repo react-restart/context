@@ -14,7 +14,7 @@
     "tdd": "jest --watch",
     "test": "npm run test:types && npm run lint && jest",
     "testonly": "jest",
-    "test:types": "dtslint types",
+    "test:types": "tslint -p types",
     "build:es": "babel src -d lib/es --env-name esm --ignore **/__tests__ ",
     "build:lib": "babel src -d lib --ignore **/__tests__ --delete-dir-on-start ",
     "build": "npm run build:lib && npm run build:es && cpy types/*.d.ts lib && cpy types/*.d.ts lib/es",
@@ -42,7 +42,9 @@
     ]
   },
   "jest": {
-    "testEnvironment": "jsdom",
+    "roots": [
+      "<rootDir>/test"
+    ],
     "setupFiles": [
       "<rootDir>/test/index.js"
     ]
