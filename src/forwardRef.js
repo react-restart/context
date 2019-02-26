@@ -10,17 +10,15 @@ export default function forwardRef(
   } = {},
 ) {
   const render = (props, ref) => renderFn(props, ref);
-  render.displayName = displayName;
 
-  if (React.forwardRef || !allowFallback)
-    return Object.assign(React.forwardRef(render), {
+  return Object.assign(
+    React.forwardRef || !allowFallback
+      ? React.forwardRef(render)
+      : props => render(props, null),
+    {
+      displayName,
       propTypes,
       defaultProps,
-    });
-
-  return Object.assign(props => render(props, null), {
-    displayName,
-    propTypes,
-    defaultProps,
-  });
+    },
+  );
 }

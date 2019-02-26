@@ -122,7 +122,7 @@ describe('mapContextToProps', () => {
       'div',
     );
 
-    expect(Mapper.render.displayName).toEqual('ContextTransform(div)');
+    expect(Mapper.displayName).toEqual('ContextTransform(div)');
   });
 
   it('should add custom displayName', () => {
@@ -135,7 +135,7 @@ describe('mapContextToProps', () => {
       'div',
     );
 
-    expect(Mapper.render.displayName).toEqual('WithIntl');
+    expect(Mapper.displayName).toEqual('WithIntl');
   });
 
   it('should not warn about Contexts', () => {

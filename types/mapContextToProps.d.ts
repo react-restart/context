@@ -3,13 +3,15 @@
 declare module 'react-context-toolbox/mapContextToProps' {
   import * as React from 'react';
 
-  type ElementType = React.ComponentType<any> | keyof JSX.IntrinsicElements;
-
   type Omit<T, U> = Pick<T, Exclude<keyof T, keyof U>>;
 
   type GetProps<C> = C extends React.ComponentType<infer P> ? P : never;
 
-  interface ContextInjectedComponent<TComponent, TInjectedProps, TExtraProps>
+  export interface ContextInjectedComponent<
+    TComponent,
+    TInjectedProps,
+    TExtraProps
+  >
     extends React.ForwardRefExoticComponent<
         Omit<GetProps<TComponent>, TInjectedProps> & TExtraProps
       > {}

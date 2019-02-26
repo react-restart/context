@@ -10,6 +10,6 @@ describe('forwardRef', () => {
       return null;
     });
 
-    expect(mount(<Foo />).find('ForwardRef(Foo)')).toHaveLength(1);
+    expect(mount(<Foo />).find('Foo')).toHaveLength(1);
   });
 });
