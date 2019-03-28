@@ -1,3 +1,5 @@
+!.babelrc.js
+
 lib/
 es/
 **/node_modules/**
