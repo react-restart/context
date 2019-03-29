@@ -3,7 +3,7 @@ import React from 'react';
 export default function forwardRef(
   renderFn,
   {
-    propTypes,
+    propTypes, // eslint-disable-line react/forbid-foreign-prop-types
     defaultProps,
     allowFallback = false,
     displayName = renderFn.name || renderFn.displayName,
