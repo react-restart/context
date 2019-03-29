@@ -1,3 +1,10 @@
+## [2.1.4](https://github.com/react-restart/context/compare/v2.1.3...v2.1.4) (2019-03-29)
+
+
+### Bug Fixes
+
+* Force bump to fix build ([d915f86](https://github.com/react-restart/context/commit/d915f86))
+
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/react-restart/context/compare/v2.0.4...v2.1.0) (2019-02-26)
 
