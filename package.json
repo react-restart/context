@@ -68,7 +68,7 @@
     "babel-core": "bridge",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.5.0",
-    "codecov": "^3.6.5",
+    "codecov": "^3.7.1",
     "cpy-cli": "^2.0.0",
     "dtslint": "^0.5.9",
     "enzyme": "^3.9.0",
