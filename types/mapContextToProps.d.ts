@@ -18,6 +18,14 @@ declare module '@restart/context/mapContextToProps' {
 
   // Single Context
   function mapContextToProps<TComponent, TContext, TContextProps, TOwnProps>(
+    data: {
+      consumers: TContext;
+      mapToProps: (context: TContext) => TContext,
+      displayName: string;
+    },
+    Component: TComponent,
+  ): ContextInjectedComponent<TComponent, TContextProps, TOwnProps>;
+  function mapContextToProps<TComponent, TContext, TContextProps, TOwnProps>(
     context: React.Context<TContext> | [React.Context<TContext>],
     mapToProps: (ctxValue: TContext, props: TOwnProps) => TContextProps,
     Component: TComponent,
